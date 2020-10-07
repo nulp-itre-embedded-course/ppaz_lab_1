@@ -44,18 +44,18 @@
 static cy_stc_gpio_pin_config_t user_led =
 {
     .outVal = 1,
-	.driveMode = CY_GPIO_DM_STRONG_IN_OFF,
-	.hsiom = P13_4_GPIO,
-	.intEdge = CY_GPIO_INTR_DISABLE,
-	.intMask = 0UL,
-	.vtrip = CY_GPIO_VTRIP_CMOS,
-	.slewRate = CY_GPIO_SLEW_FAST,
-	.driveSel = CY_GPIO_DRIVE_1_2,
-	.vregEn = 0UL,
-	.ibufMode = 0UL,
-	.vtripSel = 0UL,
-	.vrefSel = 0UL,
-	.vohSel = 0UL,
+    .driveMode = CY_GPIO_DM_STRONG_IN_OFF,
+    .hsiom = P13_4_GPIO,
+    .intEdge = CY_GPIO_INTR_DISABLE,
+    .intMask = 0UL,
+    .vtrip = CY_GPIO_VTRIP_CMOS,
+    .slewRate = CY_GPIO_SLEW_FAST,
+    .driveSel = CY_GPIO_DRIVE_1_2,
+    .vregEn = 0UL,
+    .ibufMode = 0UL,
+    .vtripSel = 0UL,
+    .vrefSel = 0UL,
+    .vohSel = 0UL,
 };
 
 
@@ -70,7 +70,7 @@ int main(void)
     {
         Cy_SysLib_Delay(DELAY);
 
-		/* Invert pin */
+        /* Invert pin */
         Cy_GPIO_Inv(USER_LED_PORT, USER_LED_PIN);
     }
 }
