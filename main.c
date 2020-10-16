@@ -10,16 +10,25 @@
  * ========================================
 */
 #include "project.h"
+#define HIGH 0
+#define LOW 1
+
 
 int main(void)
 {
-    CyGlobalIntEnable; /* Enable global interrupts. */
-
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+    CyGlobalIntEnable; 
+    
     for(;;)
     {
-        /* Place your application code here. */
+        if (Sw_Read() == HIGH )
+        { LED_Write(HIGH);
+        }
+        else{
+            LED_Write(LOW);
+        }
+        
+       
+       
     }
 }
 
