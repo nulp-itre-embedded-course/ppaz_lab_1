@@ -20,6 +20,10 @@ int main(void)
 
     for(;;)
     {
+        LED_Write (1); // функцiя встановлення високого потенцiалу
+        CyDelay(1000);// функцiя затримки
+        LED_Write (0);
+        CyDelay(1000);        
         /* Place your application code here. */
     }
 }
