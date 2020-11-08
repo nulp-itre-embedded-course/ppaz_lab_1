@@ -13,14 +13,13 @@
 
 int main(void)
 {
-    CyGlobalIntEnable; /* Enable global interrupts. */
-
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+    uint32_t svitlo = 20U;
+    uint32_t period = 200U;
     for(;;)
     {
-        /* Place your application code here. */
+        Pin_1_Write(1U);
+        CyDelay(svitlo);
+        Pin_1_Write(0U);
+        CyDelay(period - svitlo);
     }
 }
-
-/* [] END OF FILE */
