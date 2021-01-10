@@ -17,7 +17,7 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-
+int a;
     for(;;)
     {
         LED_Write (1); // функцiя встановлення високого потенцiалу
