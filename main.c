@@ -11,16 +11,22 @@
 */
 #include "project.h"
 
+#define HIGH 1
+#define LOW  0
+
 int main(void)
 {
+
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
     for(;;)
     {
-        Diod_Write(!Diod_Read());
-        CyDelay(5000);
+        LED_Write (HIGH); // Встановлення високого потенціалу на пін LED
+        CyDelay(1000);// функцiя затримки
+        LED_Write (LOW); // Встановлення низького потенціалу на пін LED
+        CyDelay(1000);  
     }
 }
 
